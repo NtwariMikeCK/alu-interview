@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module for the entry point of the command interpreter."""
+
 
 def rain(walls):
     """
@@ -33,4 +35,3 @@ def rain(walls):
         total_water += max(min(left_max[i], right_max[i]) - walls[i], 0)
     
     return total_water
-
