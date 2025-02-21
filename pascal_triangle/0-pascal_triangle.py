@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """This prints out the pascal's traingle"""
+
 def pascal_traingle(n):
   """
   Generate Pascal's triangle up to the nth row.
