@@ -7,9 +7,9 @@ def pascal_traingle(n):
     return []
   triangle = [[1]]# Initialize with the first row
   for i in range(1, n):
-    # Start the row with 1
+    """Executes when n above 0"""
     row = [1]
-    # Compute the inner values by summing adjacent values from the previous row
+    """Compute the inner values by summing adjacent values from the previous row"""
     for j in range(1, i):
         row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
     # End the row with 1
