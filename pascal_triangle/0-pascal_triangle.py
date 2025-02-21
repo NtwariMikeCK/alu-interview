@@ -2,15 +2,7 @@
 """This prints out the pascal's traingle"""
 
 def pascal_traingle(n):
-  """
-  Generate Pascal's triangle up to the nth row.
-
-  Args:
-      n (int): The number of rows of Pascal's triangle to generate.
-
-  Returns:
-      List[List[int]]: A list of lists representing Pascal's triangle.
-  """
+ """This prints out the pascal's traingle"""
   if n <= 0:
     return []
   triangle = [[1]]# Initialize with the first row
