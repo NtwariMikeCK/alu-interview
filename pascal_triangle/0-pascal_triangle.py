@@ -1,19 +1,48 @@
+
 #!/usr/bin/python3
-"""This prints out the pascal's traingle"""
+"""
+Pascal's Triangle
+"""
 
-def pascal_traingle(n):
- """This prints out the pascal's traingle"""
-  if n <= 0:
-    return []
-  triangle = [[1]]# Initialize with the first row
-  for i in range(1, n):
-    """Executes when n above 0"""
-    row = [1]
-    """Compute the inner values by summing adjacent values from the previous row"""
-    for j in range(1, i):
-        row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-    # End the row with 1
-    row.append(1)
-    triangle.append(row)
 
-  return triangle
+def pascal_triangle(n):
+    """
+    Generate Pascal's triangle of size n.
+
+    Args:
+        n (int): The size of the triangle.
+
+    Returns:
+        list: A list of lists representing Pascal's triangle.
+
+    """
+    if n <= 0:
+        return []
+
+    triangle = [[1]]
+
+    for i in range(1, n):
+        row = [1]
+        for j in range(1, i):
+            row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
+        row.append(1)
+        triangle.append(row)
+
+    return triangle
+
+
+def print_triangle(triangle):
+    """
+    Print the Pascal's triangle.
+
+    Args:
+        triangle (list): Pascal's triangle represented as a list of lists.
+
+    """
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
+
+
+# Test the function
+if __name__ == "__main__":
+    print_triangle(pascal_triangle(5))
